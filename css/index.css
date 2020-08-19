@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+}
+
+.navbar {
+    top: 0;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center!important;
+    background: #28a745;
+}
+
+.navbar a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar a:hover {
+    background: #00abe5;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 100vh auto 300px 100px;
+}
+
+.welcome-section {
+    text-align: center;
+    padding-top: 150px;
+    background: #28a74547;
+}
+
+.title {
+    padding-bottom: 150px;
+}
+
+.projects {
+    text-align: center;
+    background: #ffffff;
+    padding: 15px 0;
+}
+
+.profile {
+    text-align: center;
+    background: #117a8b45;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 40px 0;
+}
+
+.circle {
+    background: #28a745;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: #212529;
+    font-size: 1.2em;
+}
+
+.copyright {
+    text-align: center;
+    background: #28a745;
+    padding: 1em;
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.project-tile {
+    background: #ffffff;
+    padding: 2em;
+}
+
+.project-tile a {
+    text-decoration: none;
+    color: #6c757de3;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+@media all and (max-width: 800px) {
+    .navbar {
+        justify-content: space-around;
+    }
+
+    .tiles {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navbar {
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    .navbar a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a:last-of-type {
+        border-bottom: none;
+    }
+
+    .tiles {
+        grid-template-columns: 1fr;
+    }
+}
